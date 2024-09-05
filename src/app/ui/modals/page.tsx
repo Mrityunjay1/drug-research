@@ -6,7 +6,7 @@ interface ModalProps {
   onCloseText?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ id, title, content, onCloseText }) => {
+const Modal = ({ id, title, content, onCloseText }: ModalProps) => {
   return (
     <dialog id={id} className="modal">
       <div className="modal-box bg-[#ffffff] text-black dark:bg-[#181818] dark:text-white">

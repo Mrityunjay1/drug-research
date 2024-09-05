@@ -13,7 +13,11 @@ const Modal = ({ id, title, content, onCloseText }: ModalProps) => {
         <h3 className="text-lg font-bold">{title}</h3>
         <div className="py-4">{content}</div>
         <div className="modal-action">
-          <form method="dialog"></form>
+          <form method="dialog">
+            <button className="btn btn-primary">
+              {onCloseText || "Close"}
+            </button>
+          </form>
         </div>
       </div>
     </dialog>

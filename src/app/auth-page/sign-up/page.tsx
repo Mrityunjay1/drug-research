@@ -151,7 +151,7 @@ const SignUp: React.FC = () => {
                     />
                   </div>
                   <p className="text-xl font-semibold text-black">
-                    ProteinBind
+                    Drug Research
                   </p>
                 </div>
               </Link>
@@ -288,7 +288,7 @@ const SignUp: React.FC = () => {
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
               <span className="mb-1.5 block font-medium">Start for free</span>
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign Up to ProteinBind
+                Sign Up to Drug Research
               </h2>
 
               <div>

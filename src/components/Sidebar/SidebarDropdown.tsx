@@ -7,16 +7,24 @@ const SidebarDropdown = ({ item }: any) => {
 
   return (
     <>
-      <ul className="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-        {item.map((item: any, index: number) => (
+      <ul className="flex flex-col gap-2">
+        {item.map((subItem: any, index: number) => (
           <li key={index}>
             <Link
-              href={item.route}
-              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
-                pathname === item.route ? "text-white" : ""
+              href={subItem.route}
+              className={`flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors duration-300 ease-in-out
+              ${
+                pathname === subItem.route
+                  ? "bg-indigo-600 text-white"
+                  : "text-gray-400 hover:bg-indigo-700/30 hover:text-white"
               }`}
             >
-              {item.label}
+              <span
+                className={`${pathname === subItem.route ? "text-white" : "text-gray-500"}`}
+              >
+                {subItem.icon}
+              </span>
+              <span>{subItem.label}</span>
             </Link>
           </li>
         ))}

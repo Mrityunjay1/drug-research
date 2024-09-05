@@ -74,14 +74,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-[#000000] lg:translate-x-0 ${
+        className={`dark:from-gray-900 dark:to-gray-800 fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-gradient-to-b from-indigo-800 to-indigo-900 duration-300 ease-linear lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
           <Link href="/">
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="ml-2 rounded-lg bg-[#3c4fe0] p-1">
+              <div className="ml-2 rounded-lg bg-white p-1">
                 <Image
                   width={32}
                   height={32}
@@ -90,14 +90,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   priority
                 />
               </div>
-              <p className="text-xl font-semibold text-white">ProteinBind</p>
+              <p className="text-xl font-semibold text-white">Drug Research</p>
             </div>
           </Link>
 
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             aria-controls="sidebar"
-            className="block lg:hidden"
+            className="hover:text-gray-300 block text-white lg:hidden"
           >
             <ChevronLeft />
           </button>
@@ -107,7 +107,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
             {menuGroups.map((group, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+                <h3 className="text-gray-400 mb-4 ml-4 text-sm font-semibold">
                   {group.name}
                 </h3>
 
